@@ -224,10 +224,28 @@ export const portfolioData = {
       title: "pyvalidex — Python Open Source Library",
       badge: "PyPI Package",
       description:
-        "Published Python library on PyPI providing fast, algorithmic verification and checksum validation for Indian national IDs and financial identifiers.",
+        "Published Python library on PyPI providing fast, algorithmic verification and checksum validation for Indian national IDs and financial identifiers with zero external dependencies.",
       tech: ["Python", "PyPI", "Algorithms", "CI/CD", "Testing"],
       link: "https://pypi.org/project/pyvalidex/0.1.1/",
       linkText: "View on PyPI (0.1.1) →",
+    },
+    {
+      title: "Edge AI Low-Latency Neural Inference Pipeline",
+      badge: "Edge AI & Optimization",
+      description:
+        "Optimized deep learning inference server utilizing TensorRT, ONNX runtime quantization, and asynchronous batching for high-throughput sub-15ms computer vision pipelines.",
+      tech: ["TensorRT", "ONNX", "PyTorch", "Docker", "AsyncIO", "CUDA"],
+      link: "#",
+      linkText: "View Pipeline →",
+    },
+    {
+      title: "Agentic Code Intelligence & RAG Chatbot",
+      badge: "Autonomous Agents",
+      description:
+        "Multi-agent reasoning system capable of querying complex codebases, generating AST dependency graphs, and providing citation-backed architectural explanations.",
+      tech: ["LangChain", "ChromaDB", "Llama 3", "Python", "FastAPI"],
+      link: "#",
+      linkText: "View Agent System →",
     },
   ],
   languages: ["English", "Hindi", "Malayalam", "Tamil"],

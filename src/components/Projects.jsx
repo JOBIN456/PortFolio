@@ -4,84 +4,120 @@ import { portfolioData } from '../data/portfolioData';
 export default function Projects() {
   const { projects } = portfolioData;
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [itemsVisible, setItemsVisible] = useState(3);
   const [isPaused, setIsPaused] = useState(false);
 
-  // Auto-play carousel every 5 seconds if not hovered
+  // Responsive items visible calculation
+  useEffect(() => {
+    const handleResize = () => {
+      const width = window.innerWidth;
+      if (width < 680) {
+        setItemsVisible(1);
+      } else if (width < 1024) {
+        setItemsVisible(2);
+      } else {
+        setItemsVisible(3);
+      }
+    };
+
+    handleResize();
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  const maxIndex = Math.max(0, projects.length - itemsVisible);
+
+  // Auto-play
   useEffect(() => {
     if (isPaused) return;
-    const timer = setInterval(() => {
-      setCurrentIndex((prev) => (prev + 1) % projects.length);
-    }, 4500);
-    return () => clearInterval(timer);
-  }, [isPaused, projects.length]);
+    const interval = setInterval(() => {
+      setCurrentIndex((prev) => (prev >= maxIndex ? 0 : prev + 1));
+    }, 4000);
+    return () => clearInterval(interval);
+  }, [isPaused, maxIndex]);
 
   const handlePrev = () => {
-    setCurrentIndex((prev) => (prev === 0 ? projects.length - 1 : prev - 1));
+    setCurrentIndex((prev) => (prev <= 0 ? maxIndex : prev - 1));
   };
 
   const handleNext = () => {
-    setCurrentIndex((prev) => (prev + 1) % projects.length);
+    setCurrentIndex((prev) => (prev >= maxIndex ? 0 : prev + 1));
   };
 
   return (
     <section className="projects-section" id="projects">
       <div className="section-header">
-        <h2>AI, Deep Learning & Vision Projects</h2>
-        <p className="subtitle">
-          Interactive showcase of Generative AI systems, Computer Vision pipelines & Machine Learning solutions
-        </p>
+        <div className="projects-header-top">
+          <div>
+            <h2>Featured AI & ML Projects</h2>
+            <p className="subtitle">
+              Production Generative AI architectures, Computer Vision pipelines & Machine Learning deployments
+            </p>
+          </div>
+
+          <div className="carousel-nav-buttons">
+            <button
+              className="carousel-control-btn"
+              onClick={handlePrev}
+              aria-label="Previous project slide"
+            >
+              ❮
+            </button>
+            <button
+              className="carousel-control-btn"
+              onClick={handleNext}
+              aria-label="Next project slide"
+            >
+              ❯
+            </button>
+          </div>
+        </div>
       </div>
 
       <div
-        className="carousel-wrapper"
+        className="carousel-multi-container"
         onMouseEnter={() => setIsPaused(true)}
         onMouseLeave={() => setIsPaused(false)}
       >
-        <button
-          className="carousel-control-btn prev"
-          onClick={handlePrev}
-          aria-label="Previous project"
-        >
-          ❮
-        </button>
-
-        <div className="carousel-viewport">
+        <div className="carousel-viewport-multi">
           <div
-            className="carousel-track"
+            className="carousel-track-multi"
             style={{
-              transform: `translateX(-${currentIndex * 100}%)`,
+              transform: `translateX(-${currentIndex * (100 / itemsVisible)}%)`,
             }}
           >
             {projects.map((proj, idx) => (
-              <div className="carousel-slide" key={idx}>
-                <div className="project-card carousel-card">
-                  <div className="card-top-meta">
+              <div
+                className="carousel-slide-multi"
+                key={idx}
+                style={{ width: `${100 / itemsVisible}%` }}
+              >
+                <div className="project-card-v2">
+                  <div className="card-top-bar">
+                    <span className="card-project-num">0{idx + 1}</span>
                     {proj.badge && (
-                      <span className="project-badge-tag">{proj.badge}</span>
+                      <span className="project-badge-tag-v2">{proj.badge}</span>
                     )}
-                    <span className="slide-counter">
-                      0{idx + 1} / 0{projects.length}
-                    </span>
                   </div>
 
-                  <h3 className="project-title">{proj.title}</h3>
-                  <p className="project-desc">{proj.description}</p>
+                  <h3 className="project-title-v2">{proj.title}</h3>
+                  <p className="project-desc-v2">{proj.description}</p>
 
-                  <div className="card-bottom">
-                    <div className="project-tech">
+                  <div className="card-bottom-v2">
+                    <div className="project-tech-v2">
                       {proj.tech.map((t) => (
-                        <span className="project-tech-tag" key={t}>
+                        <span className="project-tech-tag-v2" key={t}>
                           {t}
                         </span>
                       ))}
                     </div>
 
-                    <div className="project-links">
+                    <div className="project-links-v2">
                       <a
                         href={proj.link}
                         target={proj.link !== '#' ? '_blank' : '_self'}
                         rel="noopener noreferrer"
-                        className="project-link-btn"
+                        className="project-link-btn-v2"
                       >
                         {proj.linkText}
                       </a>
@@ -92,28 +128,21 @@ export default function Projects() {
             ))}
           </div>
         </div>
-
-        <button
-          className="carousel-control-btn next"
-          onClick={handleNext}
-          aria-label="Next project"
-        >
-          ❯
-        </button>
       </div>
 
-      {/* Carousel Pagination Dots */}
-      <div className="carousel-dots">
-        {projects.map((_, idx) => (
+      {/* Pagination indicators */}
+      <div className="carousel-dots-multi">
+        {Array.from({ length: maxIndex + 1 }).map((_, idx) => (
           <button
             key={idx}
-            className={`carousel-dot ${currentIndex === idx ? 'active' : ''}`}
+            className={`carousel-dot-v2 ${currentIndex === idx ? 'active' : ''}`}
             onClick={() => setCurrentIndex(idx)}
-            aria-label={`Go to slide ${idx + 1}`}
+            aria-label={`Slide group ${idx + 1}`}
           />
         ))}
       </div>
     </section>
   );
 }
+
 
