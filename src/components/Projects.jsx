@@ -7,9 +7,9 @@ export default function Projects() {
   return (
     <section className="projects-section" id="projects">
       <div className="section-header">
-        <h2>Featured Projects</h2>
+        <h2>AI, Deep Learning & Vision Projects</h2>
         <p className="subtitle">
-          Engineered scalable web applications & AI-driven solutions
+          Production Generative AI systems, Computer Vision pipelines & Machine Learning solutions
         </p>
       </div>
 
@@ -17,6 +17,11 @@ export default function Projects() {
         {projects.map((proj, idx) => (
           <div className="project-card" key={idx}>
             <div>
+              {proj.badge && (
+                <div style={{ marginBottom: '10px' }}>
+                  <span className="project-badge-tag">{proj.badge}</span>
+                </div>
+              )}
               <h3 className="project-title">{proj.title}</h3>
               <p className="project-desc">{proj.description}</p>
             </div>
@@ -32,12 +37,12 @@ export default function Projects() {
 
               <div className="project-links">
                 <a
-                  href={proj.github}
-                  target="_blank"
+                  href={proj.link}
+                  target={proj.link !== '#' ? '_blank' : '_self'}
                   rel="noopener noreferrer"
                   className="project-link-btn"
                 >
-                  View Code →
+                  {proj.linkText}
                 </a>
               </div>
             </div>

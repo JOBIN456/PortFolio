@@ -10,7 +10,7 @@ export default function Experience() {
         <div className="section-header">
           <h2>Work Experience</h2>
           <p className="subtitle">
-            Building impactful solutions across different domains
+            Building Generative AI, RAG pipelines, and enterprise systems
           </p>
         </div>
 
@@ -20,7 +20,9 @@ export default function Experience() {
               <div className="card-header">
                 <div className="company-info">
                   <h3>{exp.company}</h3>
-                  <p className="job-role">{exp.role}</p>
+                  <p className="job-role">
+                    {exp.role} {exp.location && `• ${exp.location}`}
+                  </p>
                 </div>
                 <span className="duration-badge">{exp.duration}</span>
               </div>
@@ -28,7 +30,7 @@ export default function Experience() {
               <p className="card-description">{exp.description}</p>
 
               <div className="achievements">
-                <h4>Key Achievements:</h4>
+                <h4>Key Responsibilities & Achievements:</h4>
                 <ul>
                   {exp.achievements.map((achieve, i) => (
                     <li key={i}>{achieve}</li>

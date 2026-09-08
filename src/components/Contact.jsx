@@ -13,11 +13,17 @@ export default function Contact() {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (formData.name && formData.email && formData.message) {
+      const subject = encodeURIComponent(`AI Project Inquiry from ${formData.name}`);
+      const body = encodeURIComponent(
+        `Hi Jobin,\n\nName: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`
+      );
+      window.location.href = `mailto:${personal.email}?subject=${subject}&body=${body}`;
+
       setSubmitted(true);
       setTimeout(() => {
         setSubmitted(false);
         setFormData({ name: '', email: '', message: '' });
-      }, 4000);
+      }, 5000);
     }
   };
 
@@ -25,24 +31,47 @@ export default function Contact() {
     <section className="contact-section" id="contact">
       <div className="section-header">
         <h2>Get In Touch</h2>
-        <p className="subtitle">Let's discuss opportunities or collaborations</p>
+        <p className="subtitle">
+          Open for AI Engineer roles, GenAI/CV consulting & intelligent system collaborations
+        </p>
       </div>
 
       <div className="contact-container">
         <div className="contact-info">
           <h3>Let's Connect</h3>
           <p>
-            Have a project in mind, an opportunity, or looking for an experienced
-            Python Full Stack & AI Engineer? Feel free to reach out.
+            Looking for an experienced <strong>AI Engineer</strong> capable of building and deploying
+            production <strong>Generative AI</strong>, <strong>Deep Learning</strong>,{' '}
+            <strong>Computer Vision (YOLO/OpenCV)</strong>, and <strong>Agentic RAG workflows</strong>?
+            Reach out directly:
           </p>
 
           <div className="contact-item">
             <span className="contact-item-icon">✉</span>
-            <span>your.email@example.com</span>
+            <a href={`mailto:${personal.email}`} style={{ color: '#e0e0e0', textDecoration: 'none' }}>
+              {personal.email}
+            </a>
           </div>
           <div className="contact-item">
-            <span className="contact-item-icon">⚡</span>
-            <span>Available for Full-time Roles & Contracts</span>
+            <span className="contact-item-icon">📞</span>
+            <a href={`tel:${personal.phone.replace(/\s+/g, '')}`} style={{ color: '#e0e0e0', textDecoration: 'none' }}>
+              {personal.phone}
+            </a>
+          </div>
+          <div className="contact-item">
+            <span className="contact-item-icon">📍</span>
+            <span>{personal.location}</span>
+          </div>
+          <div className="contact-item">
+            <span className="contact-item-icon">📦</span>
+            <a
+              href={personal.socialLinks.pypi}
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ color: 'var(--primary-color)', textDecoration: 'none', fontWeight: 'bold' }}
+            >
+              pyvalidex on PyPI (0.1.1)
+            </a>
           </div>
         </div>
 
@@ -59,7 +88,7 @@ export default function Contact() {
                 fontWeight: '600',
               }}
             >
-              Thank you! Your message has been sent successfully.
+              Drafting email in your email app to {personal.email}...
             </div>
           ) : (
             <>
@@ -84,7 +113,7 @@ export default function Contact() {
                 }
               />
               <textarea
-                placeholder="Your Message..."
+                placeholder="Describe your AI / Computer Vision / ML project or opportunity..."
                 className="contact-textarea"
                 required
                 value={formData.message}
@@ -93,7 +122,7 @@ export default function Contact() {
                 }
               ></textarea>
               <button type="submit" className="contact-submit-btn">
-                Send Message
+                Send Message via Email
               </button>
             </>
           )}
