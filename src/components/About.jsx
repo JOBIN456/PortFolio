@@ -58,8 +58,22 @@ function Ai3DNeuralSphere() {
       mouseRef.current.isHovered = false;
     };
 
+    const onTouchMove = (e) => {
+      if (!e.touches || e.touches.length === 0) return;
+      const rect = canvas.getBoundingClientRect();
+      const nx = (e.touches[0].clientX - rect.left) / rect.width - 0.5;
+      const ny = (e.touches[0].clientY - rect.top) / rect.height - 0.5;
+      mouseRef.current = { x: nx * 3, y: ny * 3, isHovered: true };
+    };
+
+    const onTouchEnd = () => {
+      mouseRef.current.isHovered = false;
+    };
+
     canvas.addEventListener('mousemove', onMouseMove);
     canvas.addEventListener('mouseleave', onMouseLeave);
+    canvas.addEventListener('touchmove', onTouchMove, { passive: true });
+    canvas.addEventListener('touchend', onTouchEnd);
 
     const render = () => {
       time += 0.025;
@@ -69,7 +83,7 @@ function Ai3DNeuralSphere() {
 
       ctx.clearRect(0, 0, w, h);
 
-      const sphereRadius = Math.min(w, h) * 0.36;
+      const sphereRadius = Math.min(w, h) * 0.4;
       const cx = w / 2;
       const cy = h / 2;
 
@@ -176,6 +190,8 @@ function Ai3DNeuralSphere() {
       window.removeEventListener('resize', resizeCanvas);
       canvas.removeEventListener('mousemove', onMouseMove);
       canvas.removeEventListener('mouseleave', onMouseLeave);
+      canvas.removeEventListener('touchmove', onTouchMove);
+      canvas.removeEventListener('touchend', onTouchEnd);
       cancelAnimationFrame(animationFrameId);
     };
   }, []);
@@ -189,26 +205,8 @@ export default function About() {
   return (
     <section className="about-us" id="about">
       <div className="thegridabout">
-        <div className="imagegrid ai-sphere-card">
+        <div className="imagegrid ai-sphere-card" aria-label="Interactive 3D Neural Sphere">
           <Ai3DNeuralSphere />
-
-          <div className="ai-sphere-content">
-            <div className="ai-status-pill">
-              <span className="ai-pulse-radar"></span>
-              <span>3D NEURAL CORE ACTIVE</span>
-            </div>
-
-            <h3 className="ai-sphere-title">Autonomous AI Matrix</h3>
-            <p className="ai-sphere-subtitle">
-              Interactive Synaptic Tensor Topology
-            </p>
-
-            <div className="ai-sphere-tags">
-              <span className="sphere-tag">✦ Agentic RAG</span>
-              <span className="sphere-tag">✦ Vision YOLO</span>
-              <span className="sphere-tag">✦ LLM Workflows</span>
-            </div>
-          </div>
         </div>
 
         <div className="contentgrid">
