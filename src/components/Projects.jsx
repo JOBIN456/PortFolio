@@ -111,17 +111,6 @@ export default function Projects() {
                         </span>
                       ))}
                     </div>
-
-                    <div className="project-links-v2">
-                      <a
-                        href={proj.link}
-                        target={proj.link !== '#' ? '_blank' : '_self'}
-                        rel="noopener noreferrer"
-                        className="project-link-btn-v2"
-                      >
-                        {proj.linkText}
-                      </a>
-                    </div>
                   </div>
                 </div>
               </div>

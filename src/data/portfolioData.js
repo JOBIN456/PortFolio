@@ -199,8 +199,6 @@ export const portfolioData = {
       description:
         "Enterprise-scale GenAI platform featuring LangGraph agentic workflows, dense & sparse hybrid retrieval, reciprocal rank fusion (RRF), cross-encoder reranking, and Qdrant vector search for high-accuracy reasoning.",
       tech: ["LangGraph", "LangChain", "Qdrant", "LLMs", "FastAPI", "Docker"],
-      link: "#",
-      linkText: "View Architecture →",
     },
     {
       title: "Computer Vision Real-Time Monitoring & OCR",
@@ -208,8 +206,6 @@ export const portfolioData = {
       description:
         "End-to-end Computer Vision intelligence system combining custom YOLO object detection, OpenCV stream processing, and OCR models for real-time video monitoring and automated inspection.",
       tech: ["YOLO", "OpenCV", "PyTorch", "Deep Learning", "Python", "OCR"],
-      link: "#",
-      linkText: "View Vision Pipeline →",
     },
     {
       title: "Automotive Predictive Maintenance & ML Engine",
@@ -217,8 +213,6 @@ export const portfolioData = {
       description:
         "Production machine learning forecasting engine predicting component service intervals and inventory requirements using gradient boosting algorithms, monitored via MLflow.",
       tech: ["Scikit-learn", "Pandas", "MLflow", "FastAPI", "Docker"],
-      link: "#",
-      linkText: "View ML System →",
     },
     {
       title: "pyvalidex — Python Open Source Library",
@@ -226,8 +220,6 @@ export const portfolioData = {
       description:
         "Published Python library on PyPI providing fast, algorithmic verification and checksum validation for Indian national IDs and financial identifiers with zero external dependencies.",
       tech: ["Python", "PyPI", "Algorithms", "CI/CD", "Testing"],
-      link: "https://pypi.org/project/pyvalidex/0.1.1/",
-      linkText: "View on PyPI (0.1.1) →",
     },
     {
       title: "Edge AI Low-Latency Neural Inference Pipeline",
@@ -235,8 +227,6 @@ export const portfolioData = {
       description:
         "Optimized deep learning inference server utilizing TensorRT, ONNX runtime quantization, and asynchronous batching for high-throughput sub-15ms computer vision pipelines.",
       tech: ["TensorRT", "ONNX", "PyTorch", "Docker", "AsyncIO", "CUDA"],
-      link: "#",
-      linkText: "View Pipeline →",
     },
     {
       title: "Agentic Code Intelligence & RAG Chatbot",
@@ -244,8 +234,6 @@ export const portfolioData = {
       description:
         "Multi-agent reasoning system capable of querying complex codebases, generating AST dependency graphs, and providing citation-backed architectural explanations.",
       tech: ["LangChain", "ChromaDB", "Llama 3", "Python", "FastAPI"],
-      link: "#",
-      linkText: "View Agent System →",
     },
   ],
   languages: ["English", "Hindi", "Malayalam", "Tamil"],
