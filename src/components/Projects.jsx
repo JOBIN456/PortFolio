@@ -27,9 +27,16 @@ export default function Projects() {
 
   const maxIndex = Math.max(0, projects.length - itemsVisible);
 
+  // Keep currentIndex bounded if itemsVisible changes
+  useEffect(() => {
+    if (currentIndex > maxIndex) {
+      setCurrentIndex(maxIndex);
+    }
+  }, [maxIndex, currentIndex]);
+
   // Auto-play
   useEffect(() => {
-    if (isPaused) return;
+    if (isPaused || maxIndex <= 0) return;
     const interval = setInterval(() => {
       setCurrentIndex((prev) => (prev >= maxIndex ? 0 : prev + 1));
     }, 4000);

@@ -197,43 +197,29 @@ export const portfolioData = {
       title: "Autonomous Multimodal AI Agent & Hybrid RAG",
       badge: "Generative AI & LLMs",
       description:
-        "Enterprise-scale GenAI platform featuring LangGraph agentic workflows, dense & sparse hybrid retrieval, reciprocal rank fusion (RRF), cross-encoder reranking, and Qdrant vector search for high-accuracy reasoning.",
+        "Enterprise-scale GenAI platform developed at Popular Motor Corporation featuring LangGraph agentic workflows, dense & sparse hybrid retrieval, reciprocal rank fusion (RRF), cross-encoder reranking, and Qdrant vector search for high-accuracy automotive reasoning.",
       tech: ["LangGraph", "LangChain", "Qdrant", "LLMs", "FastAPI", "Docker"],
     },
     {
       title: "Computer Vision Real-Time Monitoring & OCR",
       badge: "Computer Vision & DL",
       description:
-        "End-to-end Computer Vision intelligence system combining custom YOLO object detection, OpenCV stream processing, and OCR models for real-time video monitoring and automated inspection.",
+        "Production Computer Vision intelligence pipeline combining custom YOLO object detection, OpenCV stream processing, and OCR models for real-time video monitoring and vehicle telemetry tracking.",
       tech: ["YOLO", "OpenCV", "PyTorch", "Deep Learning", "Python", "OCR"],
     },
     {
       title: "Automotive Predictive Maintenance & ML Engine",
-      badge: "Machine Learning",
+      badge: "Machine Learning & MLOps",
       description:
-        "Production machine learning forecasting engine predicting component service intervals and inventory requirements using gradient boosting algorithms, monitored via MLflow.",
+        "Production machine learning forecasting engine predicting component service intervals and dealership inventory demand using gradient boosting algorithms, with evaluation metrics tracked via MLflow.",
       tech: ["Scikit-learn", "Pandas", "MLflow", "FastAPI", "Docker"],
     },
     {
-      title: "pyvalidex — Python Open Source Library",
-      badge: "PyPI Package",
+      title: "AI Data ETL Pipeline & Analytics Microservices",
+      badge: "AI Backend & Data Engineering",
       description:
-        "Published Python library on PyPI providing fast, algorithmic verification and checksum validation for Indian national IDs and financial identifiers with zero external dependencies.",
-      tech: ["Python", "PyPI", "Algorithms", "CI/CD", "Testing"],
-    },
-    {
-      title: "Edge AI Low-Latency Neural Inference Pipeline",
-      badge: "Edge AI & Optimization",
-      description:
-        "Optimized deep learning inference server utilizing TensorRT, ONNX runtime quantization, and asynchronous batching for high-throughput sub-15ms computer vision pipelines.",
-      tech: ["TensorRT", "ONNX", "PyTorch", "Docker", "AsyncIO", "CUDA"],
-    },
-    {
-      title: "Agentic Code Intelligence & RAG Chatbot",
-      badge: "Autonomous Agents",
-      description:
-        "Multi-agent reasoning system capable of querying complex codebases, generating AST dependency graphs, and providing citation-backed architectural explanations.",
-      tech: ["LangChain", "ChromaDB", "Llama 3", "Python", "FastAPI"],
+        "Scalable data processing and transformation pipeline feeding downstream AI and analytics models, supported by high-performance FastAPI/Django REST microservices, PostgreSQL, and secure JWT authentication.",
+      tech: ["FastAPI", "Django", "PostgreSQL", "ETL Pipelines", "Docker", "JWT"],
     },
   ],
   languages: ["English", "Hindi", "Malayalam", "Tamil"],
