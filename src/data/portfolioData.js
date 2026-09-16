@@ -223,5 +223,5 @@ export const portfolioData = {
     },
   ],
   languages: ["English", "Hindi", "Malayalam", "Tamil"],
-  footer: "Designed and Developed By Jobin Jose | AI Engineer",
+  footer: "Designed and Developed By Jobin Jose",
 };
