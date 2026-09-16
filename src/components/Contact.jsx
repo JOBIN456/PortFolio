@@ -439,11 +439,7 @@ export default function Contact() {
                 )}
               </button>
 
-              <div className="contact-form-footer">
-                <span className="contact-form-secure">
-                  🔒 Direct delivery to <strong>{targetEmail}</strong> powered by EmailJS
-                </span>
-              </div>
+
             </form>
           )}
         </div>
