@@ -217,30 +217,7 @@ export default function Contact() {
             </div>
           </div>
 
-          <div className="contact-item">
-            <span className="contact-item-icon" title="Package">
-              <Package size={18} />
-            </span>
-            <div className="contact-item-details">
-              <span className="contact-item-label">Open Source Python Package</span>
-              <a
-                href={personal.socialLinks.pypi}
-                target="_blank"
-                rel="noopener noreferrer"
-                style={{
-                  color: 'var(--primary-color)',
-                  textDecoration: 'none',
-                  fontWeight: '600',
-                  display: 'inline-flex',
-                  alignItems: 'center',
-                  gap: '4px',
-                }}
-              >
-                pyvalidex on PyPI (0.1.1)
-                <ExternalLink size={14} />
-              </a>
-            </div>
-          </div>
+
         </div>
 
         {/* Right column: Form / Status States */}
