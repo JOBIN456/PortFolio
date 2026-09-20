@@ -56,9 +56,9 @@ export default function Projects() {
       <div className="section-header">
         <div className="projects-header-top">
           <div>
-            <h2>Featured AI & ML Projects</h2>
+            <h2>Featured Full Stack AI & ML Projects</h2>
             <p className="subtitle">
-              Production Generative AI architectures, Computer Vision pipelines & Machine Learning deployments
+              End-to-end Generative AI systems, autonomous agents, computer vision pipelines & full-stack AI deployments
             </p>
           </div>
 

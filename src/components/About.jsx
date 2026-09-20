@@ -210,7 +210,7 @@ export default function About() {
         </div>
 
         <div className="contentgrid">
-          <h3>AI Engineering & Research Profile</h3>
+          <h3>Full Stack AI Engineering & Systems Profile</h3>
           <p className="about-text">{personal.aboutText}</p>
 
           <div className="skills-grid">

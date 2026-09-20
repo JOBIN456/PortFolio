@@ -14,7 +14,7 @@ export default function Hero() {
             <div>
               <div className="ai-badge-pill">
                 <span className="pulse-dot"></span>
-                <span>AI & MACHINE LEARNING ENGINEER</span>
+                <span>{personal.badge || 'FULL STACK AI ENGINEER'}</span>
               </div>
 
               <h1 className="title">

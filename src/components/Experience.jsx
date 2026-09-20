@@ -10,7 +10,7 @@ export default function Experience() {
         <div className="section-header">
           <h2>Work Experience</h2>
           <p className="subtitle">
-            Building Generative AI, RAG pipelines, and enterprise systems
+            Building Generative AI, RAG pipelines, full-stack microservices & enterprise systems
           </p>
         </div>
 

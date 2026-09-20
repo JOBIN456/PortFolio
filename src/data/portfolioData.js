@@ -1,24 +1,25 @@
 export const portfolioData = {
   personal: {
     name: "Jobin Jose",
-    titleLine1: "I'M AN AI ENGINEER",
-    titleLine2: "& ML/DL SPECIALIST",
+    badge: "FULL STACK AI ENGINEER",
+    titleLine1: "I'M A FULL STACK",
+    titleLine2: "AI ENGINEER",
     subtitle:
-      "Architecting Generative AI, Deep Learning, Computer Vision & Autonomous Agentic Workflows",
-    profileRole: "AI, Machine Learning & Computer Vision Engineer",
+      "Architecting End-to-End Generative AI, Autonomous Agents, Scalable Backends & Full-Stack Intelligent Systems",
+    profileRole: "Full Stack AI Engineer & Intelligent Systems Architect",
     profileImage: "/images/image.png",
     computerImage: "/images/computer.png",
     email: "jobinj5210@gmail.com",
     phone: "+91 8714113978",
     location: "Kochi, Kerala, India",
     corePillars: [
-      "Generative AI & LLMs",
-      "Deep Learning (PyTorch & TF)",
-      "Computer Vision (YOLO & OpenCV)",
-      "Agentic RAG & LangGraph",
+      "Generative AI & Autonomous Agents",
+      "Full-Stack Web & Microservices",
+      "Deep Learning & Computer Vision",
+      "Hybrid RAG & Vector Systems",
     ],
     aboutText:
-      "Results-driven AI Engineer with hands-on production expertise in Machine Learning (ML), Deep Learning (DL), Generative AI (GenAI), and Computer Vision (CV). Proven track record designing autonomous LLM agents, hybrid RAG retrieval pipelines, real-time YOLO object detection models, and predictive ML forecasting engines. Highly skilled in PyTorch, TensorFlow, OpenCV, LangChain, LangGraph, and vector databases (Qdrant, ChromaDB), building production-ready, scalable AI solutions from data transformation to cloud deployment.",
+      "Results-driven Full Stack AI Engineer with end-to-end production expertise spanning Generative AI (GenAI), Autonomous LLM Agents, Deep Learning, and Computer Vision alongside robust full-stack software engineering. Proven track record architecting hybrid RAG pipelines, real-time YOLO vision systems, high-throughput FastAPI/Django microservices, and responsive modern user interfaces. Highly proficient with PyTorch, LangChain, LangGraph, vector databases (Qdrant, ChromaDB), React, Python, and Docker—transforming complex AI models into reliable, production-ready full-stack enterprise applications.",
     socialLinks: {
       linkedin: "https://linkedin.com",
       email: "mailto:jobinj5210@gmail.com",
@@ -38,6 +39,32 @@ export const portfolioData = {
         "Agentic Workflows",
         "Prompt Engineering",
         "Semantic Search",
+      ],
+    },
+    {
+      category: "Full Stack & Web Engineering",
+      items: [
+        "React",
+        "JavaScript (ES6+)",
+        "HTML5 & CSS3",
+        "REST APIs & WebSockets",
+        "Vite",
+        "Streamlit (AI Demos)",
+        "Responsive UI/UX",
+        "Modern State Flow",
+      ],
+    },
+    {
+      category: "AI Backend & Microservices",
+      items: [
+        "FastAPI",
+        "Python",
+        "RESTful Microservices",
+        "Django",
+        "Flask",
+        "Async IO",
+        "JWT Authentication",
+        "Docker Containerization",
       ],
     },
     {
@@ -71,26 +98,14 @@ export const portfolioData = {
       items: ["Qdrant", "ChromaDB", "PostgreSQL", "MySQL", "SQLite", "Embeddings"],
     },
     {
-      category: "AI Backend & API Microservices",
-      items: [
-        "FastAPI",
-        "Python",
-        "RESTful Microservices",
-        "Django",
-        "Flask",
-        "Async IO",
-        "Docker",
-      ],
-    },
-    {
       category: "MLOps, Tools & Platforms",
       items: [
         "CI/CD Pipelines",
         "Docker Containerization",
         "Git / GitHub",
         "Jupyter Notebooks",
-        "Streamlit (AI Demos)",
-        "Linux",
+        "Linux Environments",
+        "Performance Profiling",
       ],
     },
     {
@@ -99,7 +114,7 @@ export const portfolioData = {
     },
     {
       category: "Programming Languages",
-      items: ["Python", "SQL", "JavaScript", "HTML/CSS"],
+      items: ["Python", "JavaScript", "SQL", "HTML/CSS"],
     },
   ],
   experience: [
@@ -194,18 +209,18 @@ export const portfolioData = {
   ],
   projects: [
     {
-      title: "Autonomous Multimodal AI Agent & Hybrid RAG",
-      badge: "Generative AI & LLMs",
+      title: "Autonomous Multimodal AI Agent & Hybrid RAG Platform",
+      badge: "Full-Stack GenAI & Agents",
       description:
-        "Enterprise-scale GenAI platform developed at Popular Motor Corporation featuring LangGraph agentic workflows, dense & sparse hybrid retrieval, reciprocal rank fusion (RRF), cross-encoder reranking, and Qdrant vector search for high-accuracy automotive reasoning.",
-      tech: ["LangGraph", "LangChain", "Qdrant", "LLMs", "FastAPI", "Docker"],
+        "Full-stack enterprise GenAI system featuring LangGraph agentic workflows, interactive streaming UI, dense & sparse hybrid retrieval (RRF), cross-encoder reranking, and Qdrant vector search for high-accuracy automotive reasoning.",
+      tech: ["LangGraph", "FastAPI", "React", "Qdrant", "Docker", "Python"],
     },
     {
-      title: "Computer Vision Real-Time Monitoring & OCR",
+      title: "Computer Vision Real-Time Monitoring & Telemetry",
       badge: "Computer Vision & DL",
       description:
         "Production Computer Vision intelligence pipeline combining custom YOLO object detection, OpenCV stream processing, and OCR models for real-time video monitoring and vehicle telemetry tracking.",
-      tech: ["YOLO", "OpenCV", "PyTorch", "Deep Learning", "Python", "OCR"],
+      tech: ["YOLO", "OpenCV", "PyTorch", "Deep Learning", "Python", "FastAPI"],
     },
     {
       title: "Automotive Predictive Maintenance & ML Engine",
@@ -215,11 +230,11 @@ export const portfolioData = {
       tech: ["Scikit-learn", "Pandas", "MLflow", "FastAPI", "Docker"],
     },
     {
-      title: "AI Data ETL Pipeline & Analytics Microservices",
-      badge: "AI Backend & Data Engineering",
+      title: "AI Data ETL Pipeline & Full-Stack Microservices",
+      badge: "Full-Stack Backend & APIs",
       description:
-        "Scalable data processing and transformation pipeline feeding downstream AI and analytics models, supported by high-performance FastAPI/Django REST microservices, PostgreSQL, and secure JWT authentication.",
-      tech: ["FastAPI", "Django", "PostgreSQL", "ETL Pipelines", "Docker", "JWT"],
+        "Scalable data processing and transformation pipeline feeding downstream AI and analytics models, supported by high-performance FastAPI/Django REST microservices, PostgreSQL, and interactive analytics dashboards.",
+      tech: ["FastAPI", "Django", "PostgreSQL", "React", "Docker", "JWT"],
     },
   ],
   languages: ["English", "Hindi", "Malayalam", "Tamil"],

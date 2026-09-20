@@ -135,7 +135,7 @@ export default function Contact() {
       <div className="section-header">
         <h2>Get In Touch</h2>
         <p className="subtitle">
-          Open for AI Engineer roles, GenAI/CV consulting & intelligent system collaborations
+          Open for Full Stack AI Engineer roles, GenAI/Agentic consulting & intelligent system collaborations
         </p>
       </div>
 
@@ -144,14 +144,14 @@ export default function Contact() {
         <div className="contact-info">
           <div className="contact-status-pill">
             <span className="pulse-dot"></span>
-            <span>Available for Full-time AI Roles & Consulting</span>
+            <span>Available for Full-time Full Stack AI Roles & Consulting</span>
           </div>
 
           <h3>Let's Connect</h3>
           <p>
-            Looking for an experienced <strong>AI Engineer</strong> capable of building and deploying
-            production <strong>Generative AI</strong>, <strong>Deep Learning</strong>,{' '}
-            <strong>Computer Vision (YOLO/OpenCV)</strong>, and <strong>Agentic RAG workflows</strong>?
+            Looking for an experienced <strong>Full Stack AI Engineer</strong> capable of building and deploying
+            production <strong>Generative AI</strong>, <strong>Autonomous Agents</strong>,{' '}
+            <strong>Computer Vision (YOLO/OpenCV)</strong>, and <strong>Scalable Full-Stack Microservices</strong>?
             Reach out directly or send a message via the form:
           </p>
 
