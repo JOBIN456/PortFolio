@@ -95,7 +95,16 @@ export const portfolioData = {
     },
     {
       category: "Vector Stores & Databases",
-      items: ["Qdrant", "ChromaDB", "PostgreSQL", "MySQL", "SQLite", "Embeddings"],
+      items: [
+        "Qdrant",
+        "ChromaDB",
+        "PostgreSQL",
+        "MySQL",
+        "SQLite",
+        "Dense Embeddings",
+        "Hybrid Search",
+        "Vector Indexing",
+      ],
     },
     {
       category: "MLOps, Tools & Platforms",
@@ -106,15 +115,31 @@ export const portfolioData = {
         "Jupyter Notebooks",
         "Linux Environments",
         "Performance Profiling",
+        "Model Tracking",
+        "Logging & Monitoring",
       ],
     },
     {
       category: "Cloud Platforms (Foundational)",
-      items: ["AWS", "Microsoft Azure", "Google Cloud Platform"],
+      items: [
+        "AWS (EC2, S3)",
+        "Microsoft Azure",
+        "Google Cloud Platform",
+        "Serverless Functions",
+        "Cloud Storage",
+        "Container Registry",
+      ],
     },
     {
       category: "Programming Languages",
-      items: ["Python", "JavaScript", "SQL", "HTML/CSS"],
+      items: [
+        "Python (Async & Core)",
+        "JavaScript (ES6+)",
+        "SQL (PostgreSQL/MySQL)",
+        "HTML5 & Modern CSS",
+        "Bash / Shell Scripting",
+        "TypeScript Fundamentals",
+      ],
     },
   ],
   experience: [
