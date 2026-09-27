@@ -101,9 +101,7 @@ export const portfolioData = {
         "PostgreSQL",
         "MySQL",
         "SQLite",
-        "Dense Embeddings",
-        "Hybrid Search",
-        "Vector Indexing",
+
       ],
     },
     {
