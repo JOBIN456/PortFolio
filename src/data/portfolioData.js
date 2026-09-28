@@ -98,6 +98,7 @@ export const portfolioData = {
       items: [
         "Qdrant",
         "ChromaDB",
+        "pinecorne",
         "PostgreSQL",
         "MySQL",
         "SQLite",
