@@ -232,7 +232,7 @@ body {
     font-size: clamp(1.8rem, 4vw, 2.4rem);
     font-weight: bold;
     line-height: 1.25;
-    margin-bottom: 8px;
+    margin-bottom: 7px;
     letter-spacing: 0.4px;
     word-break: break-word;
 }
