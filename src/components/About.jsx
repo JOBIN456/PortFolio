@@ -125,7 +125,6 @@ export default function About() {
 
   const [activeGroup, setActiveGroup] = useState('all');
   const [searchQuery, setSearchQuery] = useState('');
-  const [copiedSkill, setCopiedSkill] = useState(null);
 
   const totalSkills = useMemo(
     () => skills.reduce((acc, curr) => acc + curr.items.length, 0),
@@ -175,14 +174,6 @@ export default function About() {
       return true;
     });
   }, [skills, activeGroup, searchQuery]);
-
-  const handleSkillClick = (skillName) => {
-    if (navigator?.clipboard?.writeText) {
-      navigator.clipboard.writeText(skillName);
-      setCopiedSkill(skillName);
-      setTimeout(() => setCopiedSkill(null), 1600);
-    }
-  };
 
   return (
     <section className="about-us" id="about">
@@ -320,21 +311,14 @@ export default function About() {
                         const isMatched =
                           searchQuery.trim().length > 0 &&
                           item.toLowerCase().includes(searchQuery.toLowerCase().trim());
-                        const isCopied = copiedSkill === item;
 
                         return (
                           <span
-                            className={`skill-tag ${isMatched ? 'matched' : ''} ${
-                              isCopied ? 'copied' : ''
-                            }`}
+                            className={`skill-tag ${isMatched ? 'matched' : ''}`}
                             key={item}
-                            onClick={() => handleSkillClick(item)}
-                            title="Click to copy technology name"
                           >
                             <span className="skill-tag-dot" />
-                            <span className="skill-name">
-                              {isCopied ? '✓ Copied' : item}
-                            </span>
+                            <span className="skill-name">{item}</span>
                           </span>
                         );
                       })}
@@ -345,11 +329,6 @@ export default function About() {
                       <span className="skill-card-badge">
                         <span className="skill-card-badge-dot" />
                         {config.badge}
-                      </span>
-                      <span className="skill-card-action-hint">
-                        {copiedSkill && skillGroup.items.includes(copiedSkill)
-                          ? 'Copied to clipboard'
-                          : 'Click tag to copy'}
                       </span>
                     </div>
                   </div>

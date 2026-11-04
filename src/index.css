@@ -911,7 +911,7 @@ body {
     display: inline-flex;
     align-items: center;
     gap: 6px;
-    cursor: pointer;
+    cursor: default;
     user-select: none;
 }
 
@@ -959,7 +959,7 @@ body {
     padding-top: 11px;
     margin-top: auto;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
     font-size: 0.72rem;
 }
