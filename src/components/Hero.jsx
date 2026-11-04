@@ -96,18 +96,6 @@ export default function Hero() {
               </a>
             </div>
           </div>
-
-          <div className="right-content">
-            <div className="photo-container">
-              <div className="photo-placeholder">
-                <img
-                  src={personal.profileImage}
-                  alt={personal.name}
-                  loading="eager"
-                />
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </section>

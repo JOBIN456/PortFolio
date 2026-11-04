@@ -171,13 +171,15 @@ body {
 .themainslidercontent {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: clamp(1.5rem, 4vw, 3rem);
+    justify-content: flex-start;
+    padding: clamp(2rem, 4vw, 3.5rem);
     gap: 2rem;
 }
 
 .left-content {
-    flex: 1.25;
+    flex: 1;
+    width: 100%;
+    max-width: 950px;
     padding: 10px;
     display: flex;
     flex-direction: column;
@@ -1899,7 +1901,7 @@ body {
 /* RESPONSIVE MEDIA QUERIES */
 @media (max-width: 968px) {
     .themainslidercontent {
-        flex-direction: column-reverse;
+        flex-direction: column;
         padding: 2rem 1.25rem;
         text-align: center;
     }
